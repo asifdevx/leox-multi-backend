@@ -43,7 +43,7 @@ frontend/.next/
 
 
 # Ignore environment files
-
+dist
 .env
 yarn.lock
 
