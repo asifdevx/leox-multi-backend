@@ -24,6 +24,6 @@ const nftSchema = new mongoose.Schema({
 
 nftSchema.index({ tokenId: 1, seller: 1 }, { unique: true });
 
-const NFT =mongoose.model("Nfts",nftSchema);
+const NFT =mongoose.model("demoNFt",nftSchema);
 
 export default NFT;
