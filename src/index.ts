@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 8000;
 app.use(express.json());
 
 const corsOptions = {
-  origin: "http://leox_multi.vercel.app", 
+  origin: "https://leox-multi.vercel.app", 
   credentials: true, // enable CORS with credentials
 };
 app.use(cors(corsOptions));
