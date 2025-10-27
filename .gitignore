@@ -34,16 +34,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Ignore node_modules for both frontend and backend
-node_modules/
-
-
-# ignore next file 
-frontend/.next/
-
-
 # Ignore environment files
-dist
 .env
-yarn.lock
-
+dist
+# Sentry Config File
+.env.sentry-build-plugin
+package-lock.json

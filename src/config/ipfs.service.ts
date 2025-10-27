@@ -5,13 +5,16 @@ export const fetchMetadata = async (tokenURI: string) => {
 
   try {
     const ipfsCID = tokenURI.replace("ipfs://", "");
-    const { data } = await axios.get(`https://nftstorage.link/ipfs/${ipfsCID}`);
+    const { data } = await axios.get(`https://crimson-odd-woodpecker-368.mypinata.cloud/ipfs/${ipfsCID}`);
 
     const imageUrl = data.image?.startsWith("ipfs://")
-      ? `https://nftstorage.link/ipfs/${data.image.replace("ipfs://", "")}`
-      : data.image || "";
-      console.log(data.name,data.description,imageUrl);
-      
+      ? `https://crimson-odd-woodpecker-368.mypinata.cloud/ipfs/${data.image.replace("ipfs://", "")}`
+      : data.image || "";   
+      console.log("cid",`https://crimson-odd-woodpecker-368.mypinata.cloud/ipfs/${ipfsCID}`);
+       
+      console.log(`https://crimson-odd-woodpecker-368.mypinata.cloud/ipfs/${data.image.replace("ipfs://", "")}`,"img");
+
+       
     return {
       name: data.name,
       description: data.description || "No description available",
